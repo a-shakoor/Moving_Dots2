@@ -21,7 +21,7 @@ from msgpack import loads
 
 from pylive import live_plotter
 import numpy as np
-
+print('reached here')
 ## 1. SETUP
 distanceToScreen = 57 # in cm
 context = zmq.Context()
@@ -30,10 +30,11 @@ addr = '127.0.0.1'  # remote ip or localhost
 req_port = "50020"  # same as in the pupil remote gui
 req = context.socket(zmq.REQ)
 req.connect("tcp://{}:{}".format(addr, req_port))
+print('reached here 2')
 # ask for the sub port
 req.send_string('SUB_PORT')
 sub_port = req.recv_string()
-
+print('reached here 3')
 # open a sub port to listen to pupil
 sub = context.socket(zmq.SUB)
 sub.connect("tcp://{}:{}".format(addr, sub_port))
@@ -49,7 +50,7 @@ sub.setsockopt_string(zmq.SUBSCRIBE, 'gaze.')
 
 ## 2. Receive data
 
-size = 20
+size = 120
 t_vec = np.linspace(0,1,size+1)[0:-1]
 x_vec = np.zeros(size)
 line1 = []
@@ -59,7 +60,7 @@ while True:
     topic, payload = sub.recv_multipart()
     gaze_point_x = loads(payload)[b'gaze_point_3d'][0]
 
-    gaze_point_x_ang = np.degrees(np.arctan(gaze_point_x / 10 / distanceToScreen))
+    gaze_point_x_ang = np.degrees(np.arctan(gaze_point_x / 10 / distanceToScreen)) # divide by 10 to get cm
 
     print("gaze in deg:", gaze_point_x_ang)
 

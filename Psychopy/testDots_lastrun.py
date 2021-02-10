@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on February 09, 2021, at 20:32
+    on February 10, 2021, at 15:09
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -67,9 +67,9 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=0, 
+    size=[1920, 1080], fullscr=True, screen=2, 
     winType='pyglet', allowGUI=False, allowStencil=False,
-    monitor='touchscreen_lab', color=[-1,-1,-1], colorSpace='rgb',
+    monitor='asus', color=[-1,-1,-1], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='deg')
 # store frame rate of monitor if we can measure it
@@ -109,20 +109,20 @@ dots_stimulus = visual.DotStim(
     win=win, name='dots_stimulus',units='deg', 
     nDots=300, dotSize=deg2pix(.17, win.monitor),
     speed=0.1, dir=0.0, coherence=0.8,
-    fieldPos=(0.0, 0.0), fieldSize=12,fieldShape='circle',
+    fieldPos=(0.0, 0.0), fieldSize=[20,20],fieldShape='circle',
     signalDots='same', noiseDots='direction',dotLife=50,
     color=[1.0,1.0,1.0], colorSpace='rgb', opacity=1,
     depth=-4.0)
 blackout = visual.Polygon(
     win=win, name='blackout',units='deg', 
-    edges=100, size=(1.5, 1.5),
+    edges=100, size=(4, 4),
     ori=0, pos=(0, 0),
     lineWidth=0, lineColor=[-1,-1,-1], lineColorSpace='rgb',
     fillColor='Black', fillColorSpace='rgb',
     opacity=1, depth=-5.0, interpolate=True)
 red_dot = visual.Polygon(
     win=win, name='red_dot',units='deg', 
-    edges=100, size=(0.3, 0.3),
+    edges=100, size=(0.4, 0.4),
     ori=0, pos=(0, 0),
     lineWidth=0, lineColor=[1,1,1], lineColorSpace='rgb',
     fillColor='Red', fillColorSpace='rgb',
@@ -136,7 +136,7 @@ fixation2 = visual.ShapeStim(
     opacity=0, depth=-7.0, interpolate=True)
 pursuit_or_saccade_dot = visual.Polygon(
     win=win, name='pursuit_or_saccade_dot',units='deg', 
-    edges=1000, size=(0.35, 0.35),
+    edges=1000, size=(0.4, 0.4),
     ori=0, pos=[0,0],
     lineWidth=0, lineColor=[0,0,0], lineColorSpace='rgb',
     fillColor='Red', fillColorSpace='rgb',
@@ -242,6 +242,8 @@ if pupil_on == 1:
     # or everything:
     # sub.setsockopt_string(zmq.SUBSCRIBE, '')
 # test congruency output
+# response trial flag
+# saccade version
 stair_range = [.03, .06, .12, .24, .48, .80, .85, .90, .95, 1]
 stair_ind = len(stair_range) - 1
 
@@ -387,7 +389,7 @@ for thisTrial in trials:
             dots_stimulus.setAutoDraw(True)
         if dots_stimulus.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > dots_stimulus.tStartRefresh + 0.3-frameTolerance:
+            if tThisFlipGlobal > dots_stimulus.tStartRefresh + .300-frameTolerance:
                 # keep track of stop time/frame for later
                 dots_stimulus.tStop = t  # not accounting for scr refresh
                 dots_stimulus.frameNStop = frameN  # exact frame index
@@ -456,9 +458,9 @@ for thisTrial in trials:
                     position = [pursuitSpeed*(t-tStart) - stepRampDist, 0]
             elif saccade_trial == 1:
                 if pursuit_saccade_isLeft == 0:
-                    position = [-5,0] # deg
+                    position = [-20,0] # deg
                 else:
-                    position = [5,0] # deg
+                    position = [20,0] # deg
         
         
         # *pursuit_or_saccade_dot* updates
@@ -494,7 +496,7 @@ for thisTrial in trials:
             win.callOnFlip(response.clearEvents, eventType='keyboard')  # clear events on next screen flip
         if response.status == STARTED:
             # is it time to stop? (based on global clock, using actual start)
-            if tThisFlipGlobal > response.tStartRefresh + 8-frameTolerance:
+            if tThisFlipGlobal > response.tStartRefresh + 100-frameTolerance:
                 # keep track of stop time/frame for later
                 response.tStop = t  # not accounting for scr refresh
                 response.frameNStop = frameN  # exact frame index
@@ -556,12 +558,15 @@ for thisTrial in trials:
     trials.addData('response.stopped', response.tStopRefresh)
     trials.addData('coh', dots_stimulus.coherence)
     trials.addData('dir', dots_stimulus.dir)
+    print("response keys: ", response.keys)
     if len(response.keys) != 1:
         responseNum = -1
-    elif response.keys[0] == "r":
+    if response.keys[0] in ['r', 'right']:
       responseNum = 0
-    else:
+    elif response.keys[0] in ['l', 'left']:
       responseNum = 180
+    else:
+      responseNum = -2
     correct = -1
     if responseNum == dots_stimulus.dir:
         correct = 1
@@ -574,6 +579,7 @@ for thisTrial in trials:
         congruent = 1
     else:
         congruent = 0
+    trials.addData('response', responseNum)
     trials.addData('correct', correct)
     trials.addData('pursuit_saccade_isLeft',pursuit_saccade_isLeft)
     trials.addData('congruent', congruent)
