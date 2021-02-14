@@ -1,0 +1,228 @@
+0.9222 	WARNING 	We strongly recommend you activate the PTB sound engine in PsychoPy prefs as the preferred audio engine. Its timing is vastly superior. Your prefs are currently set to use ['sounddevice', 'PTB', 'pyo', 'pygame'] (in that order).
+9.1347 	INFO 	Loaded monitor calibration from ['2021_02_09 20:14']
+10.4949 	EXP 	Created window1 = Window(allowGUI=False, allowStencil=False, args=UNKNOWN, autoLog=True, bitsMode=UNKNOWN, blendMode='avg', bpc=(8, 8, 8), color=array([-1., -1., -1.]), colorSpace='rgb', depthBits=8, fullscr=<method-wrapper '__getattribute__' of attributeSetter object at 0x00000166FC4E2588>, gamma=None, gammaErrorPolicy='raise', kwargs=UNKNOWN, lms=UNKNOWN, monitor=<psychopy.monitors.calibTools.Monitor object at 0x00000166FC464D68>, multiSample=False, name='window1', numSamples=2, pos=[0.0, 0.0], screen=0, size=array([1920, 1080]), stencilBits=0, stereo=False, units='deg', useFBO=True, useRetina=False, viewOri=0.0, viewPos=None, viewScale=None, waitBlanking=True, winType='pyglet')
+10.4951 	EXP 	window1: mouseVisible = True
+10.4951 	EXP 	window1: recordFrameIntervals = False
+10.6614 	EXP 	window1: recordFrameIntervals = True
+10.8450 	DEBUG 	Screen (0) actual frame rate measured at 59.94
+10.8450 	EXP 	window1: recordFrameIntervals = False
+11.0285 	EXP 	Created break_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=0.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, languageStyle='LTR', name='break_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text=str(...), units='deg', win=Window(...), wrapWidth=15.0)
+11.0315 	EXP 	Created postbreak_text = TextStim(__class__=<class 'psychopy.visual.text.TextStim'>, alignHoriz=method-wrapper(...), alignText='center', alignVert=method-wrapper(...), anchorHoriz='center', anchorVert='center', antialias=True, autoLog=True, bold=False, color='white', colorSpace='named', contrast=1.0, depth=-1.0, flipHoriz=False, flipVert=False, font='Arial', fontFiles=[], height=1, italic=False, languageStyle='LTR', name='postbreak_text', opacity=1.0, ori=0, pos=array([0., 0.]), rgb=array([255., 255., 255.]), text='Get Ready!', units='deg', win=Window(...), wrapWidth=15.0)
+11.0325 	EXP 	Created fixation1 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-3.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineWidth=1, name='fixation1', opacity=0.0, ori=array(0.), pos=array([0., 0.]), size=array([0.8, 0.8]), units='deg', vertices=ndarray(...), win=Window(...), windingRule=None)
+11.0342 	EXP 	Created dots_stimulus = DotStim(__class__=<class 'psychopy.visual.dot.DotStim'>, autoLog=True, coherence=0.8, color=array([1., 1., 1.]), colorSpace='rgb', contrast=1.0, depth=-4.0, dir=0.0, dotLife=50, dotSize=6.245130461538462, element=None, fieldPos=array([0., 0.]), fieldShape='circle', fieldSize=array([20., 20.]), nDots=300, name='dots_stimulus', noiseDots='direction', opacity=1.0, rgb=array([1., 1., 1.]), signalDots='same', speed=0.1, units='deg', win=Window(...))
+11.0378 	EXP 	Created blackout = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-5.0, fillColor='Black', fillColorSpace='named', fillRGB=array([0., 0., 0.]), interpolate=True, lineColor=array([-1., -1., -1.]), lineColorSpace='rgb', lineRGB=array([-1., -1., -1.]), lineWidth=0, name='blackout', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([3., 3.]), units='deg', vertices=ndarray(...), win=Window(...))
+11.0406 	EXP 	Created red_dot = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-6.0, fillColor='Red', fillColorSpace='named', fillRGB=array([255.,   0.,   0.]), interpolate=True, lineColor=array([1., 1., 1.]), lineColorSpace='rgb', lineRGB=array([1., 1., 1.]), lineWidth=0, name='red_dot', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.3, 0.3]), units='deg', vertices=ndarray(...), win=Window(...))
+11.0415 	EXP 	Created fixation2 = ShapeStim(__class__=<class 'psychopy.visual.shape.ShapeStim'>, autoDraw=False, autoLog=True, closeShape=True, contrast=1.0, depth=-7.0, fillColor=array([0., 0., 0.]), fillColorSpace='rgb', interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineWidth=1, name='fixation2', opacity=0.0, ori=array(0.), pos=array([0., 0.]), size=array([0.1, 0.1]), units='deg', vertices=ndarray(...), win=Window(...), windingRule=None)
+11.0491 	EXP 	Created pursuit_or_saccade_dot = Polygon(__class__=<class 'psychopy.visual.polygon.Polygon'>, autoDraw=False, autoLog=True, closeShape=True, color=method-wrapper(...), colorSpace=None, contrast=1.0, depth=-9.0, fillColor='Red', fillColorSpace='named', fillRGB=array([255.,   0.,   0.]), interpolate=True, lineColor=array([0., 0., 0.]), lineColorSpace='rgb', lineRGB=array([0., 0., 0.]), lineWidth=0, name='pursuit_or_saccade_dot', opacity=1.0, ori=array(0.), pos=array([0., 0.]), size=array([0.35, 0.35]), units='deg', vertices=ndarray(...), win=Window(...))
+11.0829 	EXP 	Created sequence: random, trialTypes=1, nReps=500, seed=None
+11.0845 	EXP 	New trial (rep=0, index=0): None
+12.1123 	EXP 	dots_stimulus: coherence = 0.48
+12.1123 	EXP 	dots_stimulus: dir = 180.0
+12.1123 	EXP 	fixation1: autoDraw = True
+12.1123 	EXP 	red_dot: autoDraw = True
+13.1139 	EXP 	fixation1: autoDraw = False
+13.1139 	EXP 	dots_stimulus: autoDraw = True
+13.1139 	EXP 	blackout: autoDraw = True
+13.4141 	EXP 	dots_stimulus: autoDraw = False
+13.4141 	EXP 	blackout: autoDraw = False
+13.4141 	EXP 	fixation2: autoDraw = True
+14.4153 	EXP 	fixation2: autoDraw = False
+14.4153 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+14.4318 	EXP 	red_dot: autoDraw = False
+15.5663 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+17.6717 	DATA 	Keypress: left
+17.7122 	EXP 	New trial (rep=1, index=0): None
+18.7162 	EXP 	break_text: autoDraw = False
+18.7162 	EXP 	postbreak_text: autoDraw = False
+18.7162 	EXP 	fixation1: autoDraw = False
+18.7162 	EXP 	dots_stimulus: autoDraw = False
+18.7162 	EXP 	blackout: autoDraw = False
+18.7162 	EXP 	red_dot: autoDraw = False
+18.7162 	EXP 	fixation2: autoDraw = False
+18.7162 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+18.7162 	EXP 	dots_stimulus: coherence = 0.12
+18.7162 	EXP 	dots_stimulus: dir = 180.0
+18.7162 	EXP 	fixation1: autoDraw = True
+18.7162 	EXP 	red_dot: autoDraw = True
+19.7205 	EXP 	fixation1: autoDraw = False
+19.7205 	EXP 	dots_stimulus: autoDraw = True
+19.7205 	EXP 	blackout: autoDraw = True
+20.0207 	EXP 	dots_stimulus: autoDraw = False
+20.0207 	EXP 	blackout: autoDraw = False
+20.0207 	EXP 	fixation2: autoDraw = True
+21.0218 	EXP 	fixation2: autoDraw = False
+21.0218 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+21.0384 	EXP 	red_dot: autoDraw = False
+22.1729 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+24.6004 	EXP 	New trial (rep=2, index=0): None
+25.4005 	DATA 	Keypress: left
+25.6043 	EXP 	break_text: autoDraw = False
+25.6043 	EXP 	postbreak_text: autoDraw = False
+25.6043 	EXP 	fixation1: autoDraw = False
+25.6043 	EXP 	dots_stimulus: autoDraw = False
+25.6043 	EXP 	blackout: autoDraw = False
+25.6043 	EXP 	red_dot: autoDraw = False
+25.6043 	EXP 	fixation2: autoDraw = False
+25.6043 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+25.6043 	EXP 	dots_stimulus: coherence = 0.03
+25.6043 	EXP 	dots_stimulus: dir = 0.0
+25.6043 	EXP 	fixation1: autoDraw = True
+25.6043 	EXP 	red_dot: autoDraw = True
+26.6107 	EXP 	fixation1: autoDraw = False
+26.6107 	EXP 	dots_stimulus: autoDraw = True
+26.6107 	EXP 	blackout: autoDraw = True
+26.9110 	EXP 	dots_stimulus: autoDraw = False
+26.9110 	EXP 	blackout: autoDraw = False
+26.9110 	EXP 	fixation2: autoDraw = True
+27.9119 	EXP 	fixation2: autoDraw = False
+27.9119 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+27.9287 	EXP 	red_dot: autoDraw = False
+29.0631 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+29.8555 	EXP 	New trial (rep=3, index=0): None
+30.6558 	DATA 	Keypress: left
+30.8596 	EXP 	break_text: autoDraw = False
+30.8596 	EXP 	postbreak_text: autoDraw = False
+30.8596 	EXP 	fixation1: autoDraw = False
+30.8596 	EXP 	dots_stimulus: autoDraw = False
+30.8596 	EXP 	blackout: autoDraw = False
+30.8596 	EXP 	red_dot: autoDraw = False
+30.8596 	EXP 	fixation2: autoDraw = False
+30.8596 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+30.8596 	EXP 	dots_stimulus: coherence = 0.24
+30.8596 	EXP 	dots_stimulus: dir = 180.0
+30.8596 	EXP 	fixation1: autoDraw = True
+30.8596 	EXP 	red_dot: autoDraw = True
+31.8660 	EXP 	fixation1: autoDraw = False
+31.8660 	EXP 	dots_stimulus: autoDraw = True
+31.8660 	EXP 	blackout: autoDraw = True
+32.1662 	EXP 	dots_stimulus: autoDraw = False
+32.1662 	EXP 	blackout: autoDraw = False
+32.1662 	EXP 	fixation2: autoDraw = True
+33.1672 	EXP 	fixation2: autoDraw = False
+33.1672 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+33.1839 	EXP 	red_dot: autoDraw = False
+34.3184 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+35.1936 	EXP 	New trial (rep=4, index=0): None
+35.9940 	DATA 	Keypress: left
+36.1978 	EXP 	break_text: autoDraw = False
+36.1978 	EXP 	postbreak_text: autoDraw = False
+36.1978 	EXP 	fixation1: autoDraw = False
+36.1978 	EXP 	dots_stimulus: autoDraw = False
+36.1978 	EXP 	blackout: autoDraw = False
+36.1978 	EXP 	red_dot: autoDraw = False
+36.1978 	EXP 	fixation2: autoDraw = False
+36.1978 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+36.1978 	EXP 	dots_stimulus: coherence = 0.06
+36.1978 	EXP 	dots_stimulus: dir = 180.0
+36.1978 	EXP 	fixation1: autoDraw = True
+36.1978 	EXP 	red_dot: autoDraw = True
+37.2046 	EXP 	fixation1: autoDraw = False
+37.2046 	EXP 	dots_stimulus: autoDraw = True
+37.2046 	EXP 	blackout: autoDraw = True
+37.5049 	EXP 	dots_stimulus: autoDraw = False
+37.5049 	EXP 	blackout: autoDraw = False
+37.5049 	EXP 	fixation2: autoDraw = True
+38.5059 	EXP 	fixation2: autoDraw = False
+38.5059 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+38.5226 	EXP 	red_dot: autoDraw = False
+39.6570 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+43.0689 	EXP 	New trial (rep=5, index=0): None
+43.8698 	DATA 	Keypress: left
+44.0736 	EXP 	break_text: autoDraw = False
+44.0736 	EXP 	postbreak_text: autoDraw = False
+44.0736 	EXP 	fixation1: autoDraw = False
+44.0736 	EXP 	dots_stimulus: autoDraw = False
+44.0736 	EXP 	blackout: autoDraw = False
+44.0736 	EXP 	red_dot: autoDraw = False
+44.0736 	EXP 	fixation2: autoDraw = False
+44.0736 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+44.0736 	EXP 	dots_stimulus: coherence = 0.24
+44.0736 	EXP 	dots_stimulus: dir = 180.0
+44.0736 	EXP 	fixation1: autoDraw = True
+44.0736 	EXP 	red_dot: autoDraw = True
+45.0792 	EXP 	fixation1: autoDraw = False
+45.0792 	EXP 	dots_stimulus: autoDraw = True
+45.0792 	EXP 	blackout: autoDraw = True
+45.3794 	EXP 	dots_stimulus: autoDraw = False
+45.3794 	EXP 	blackout: autoDraw = False
+45.3794 	EXP 	fixation2: autoDraw = True
+46.3805 	EXP 	fixation2: autoDraw = False
+46.3805 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+46.3971 	EXP 	red_dot: autoDraw = False
+47.5316 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+48.2397 	EXP 	New trial (rep=6, index=0): None
+49.0400 	DATA 	Keypress: left
+49.2438 	EXP 	break_text: autoDraw = False
+49.2438 	EXP 	postbreak_text: autoDraw = False
+49.2438 	EXP 	fixation1: autoDraw = False
+49.2438 	EXP 	dots_stimulus: autoDraw = False
+49.2438 	EXP 	blackout: autoDraw = False
+49.2438 	EXP 	red_dot: autoDraw = False
+49.2438 	EXP 	fixation2: autoDraw = False
+49.2438 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+49.2438 	EXP 	dots_stimulus: coherence = 0.03
+49.2438 	EXP 	dots_stimulus: dir = 0.0
+49.2438 	EXP 	fixation1: autoDraw = True
+49.2438 	EXP 	red_dot: autoDraw = True
+50.2511 	EXP 	fixation1: autoDraw = False
+50.2511 	EXP 	dots_stimulus: autoDraw = True
+50.2511 	EXP 	blackout: autoDraw = True
+50.5513 	EXP 	dots_stimulus: autoDraw = False
+50.5513 	EXP 	blackout: autoDraw = False
+50.5513 	EXP 	fixation2: autoDraw = True
+51.5523 	EXP 	fixation2: autoDraw = False
+51.5523 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+51.5690 	EXP 	red_dot: autoDraw = False
+52.7034 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+53.2792 	EXP 	New trial (rep=7, index=0): None
+54.0794 	DATA 	Keypress: left
+54.2832 	EXP 	break_text: autoDraw = False
+54.2832 	EXP 	postbreak_text: autoDraw = False
+54.2832 	EXP 	fixation1: autoDraw = False
+54.2832 	EXP 	dots_stimulus: autoDraw = False
+54.2832 	EXP 	blackout: autoDraw = False
+54.2832 	EXP 	red_dot: autoDraw = False
+54.2832 	EXP 	fixation2: autoDraw = False
+54.2832 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+54.2832 	EXP 	dots_stimulus: coherence = 0.06
+54.2832 	EXP 	dots_stimulus: dir = 0.0
+54.2832 	EXP 	fixation1: autoDraw = True
+54.2832 	EXP 	red_dot: autoDraw = True
+55.2894 	EXP 	fixation1: autoDraw = False
+55.2894 	EXP 	dots_stimulus: autoDraw = True
+55.2894 	EXP 	blackout: autoDraw = True
+55.5896 	EXP 	dots_stimulus: autoDraw = False
+55.5896 	EXP 	blackout: autoDraw = False
+55.5896 	EXP 	fixation2: autoDraw = True
+56.5907 	EXP 	fixation2: autoDraw = False
+56.5907 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+56.6074 	EXP 	red_dot: autoDraw = False
+57.7418 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+58.1122 	DATA 	Keypress: left
+58.1496 	EXP 	New trial (rep=8, index=0): None
+59.1537 	EXP 	break_text: autoDraw = False
+59.1537 	EXP 	postbreak_text: autoDraw = False
+59.1537 	EXP 	fixation1: autoDraw = False
+59.1537 	EXP 	dots_stimulus: autoDraw = False
+59.1537 	EXP 	blackout: autoDraw = False
+59.1537 	EXP 	red_dot: autoDraw = False
+59.1537 	EXP 	fixation2: autoDraw = False
+59.1537 	EXP 	pursuit_or_saccade_dot: autoDraw = False
+59.1537 	EXP 	dots_stimulus: coherence = 0.48
+59.1537 	EXP 	dots_stimulus: dir = 180.0
+59.1537 	EXP 	fixation1: autoDraw = True
+59.1537 	EXP 	red_dot: autoDraw = True
+60.1609 	EXP 	fixation1: autoDraw = False
+60.1609 	EXP 	dots_stimulus: autoDraw = True
+60.1609 	EXP 	blackout: autoDraw = True
+60.4611 	EXP 	dots_stimulus: autoDraw = False
+60.4611 	EXP 	blackout: autoDraw = False
+60.4611 	EXP 	fixation2: autoDraw = True
+61.4621 	EXP 	fixation2: autoDraw = False
+61.4621 	EXP 	pursuit_or_saccade_dot: autoDraw = True
+61.4789 	EXP 	red_dot: autoDraw = False
+62.4479 	DATA 	Keypress: escape
+62.6536 	EXP 	window1: mouseVisible = True
+62.6537 	DEBUG 	Saving data for testDots ExperimentHandler
+62.6570 	INFO 	saved data to C:\Users\Lab\Documents\GitHub\Moving_Dots2\Psychopy\data/_testDots_2021_Feb_10_1419.psydat
+62.6606 	INFO 	saved data to 'C:\\Users\\Lab\\Documents\\GitHub\\Moving_Dots2\\Psychopy\\data/_testDots_2021_Feb_10_1419.csv'
