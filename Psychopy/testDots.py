@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on February 10, 2021, at 15:19
+    on Thu Feb 25 10:34:51 2021
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -53,7 +53,7 @@ filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expNa
 # An ExperimentHandler isn't essential but helps with data saving
 thisExp = data.ExperimentHandler(name=expName, version='',
     extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\Lab\\Documents\\GitHub\\Moving_Dots2\\Psychopy\\testDots.py',
+    originPath='/Users/d.barany/Documents/GitHub/Moving_Dots2/Psychopy/testDots.py',
     savePickle=True, saveWideText=True,
     dataFileName=filename)
 # save a log file for detail verbose info
@@ -67,9 +67,9 @@ frameTolerance = 0.001  # how close to onset before 'same' frame
 
 # Setup the Window
 win = visual.Window(
-    size=[1920, 1080], fullscr=True, screen=2, 
+    size=[1440, 900], fullscr=True, screen=0, 
     winType='pyglet', allowGUI=False, allowStencil=False,
-    monitor='asus', color=[-1,-1,-1], colorSpace='rgb',
+    monitor='MacBook', color=[-1,-1,-1], colorSpace='rgb',
     blendMode='avg', useFBO=True, 
     units='deg')
 # store frame rate of monitor if we can measure it
@@ -129,7 +129,7 @@ red_dot = visual.Polygon(
     opacity=1, depth=-6.0, interpolate=True)
 fixation2 = visual.ShapeStim(
     win=win, name='fixation2', vertices='cross',
-    size=(0.1,0.1),
+    size=(0,0),
     ori=0, pos=(0, 0),
     lineWidth=1, lineColor=[0,0,0], lineColorSpace='rgb',
     fillColor=[0,0,0], fillColorSpace='rgb',
