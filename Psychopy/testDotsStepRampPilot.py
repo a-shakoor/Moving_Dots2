@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2020.2.5),
-    on February 25, 2021, at 14:33
+    on February 26, 2021, at 14:20
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -121,7 +121,7 @@ fixation2 = visual.ShapeStim(
     opacity=0, depth=-5.0, interpolate=True)
 pursuit_or_saccade_dot = visual.Polygon(
     win=win, name='pursuit_or_saccade_dot',units='deg', 
-    edges=1000, size=(0.6, 0.6),
+    edges=20, size=(0.6, 0.6),
     ori=0, pos=[0,0],
     lineWidth=0, lineColor=[0,0,0], lineColorSpace='rgb',
     fillColor='Red', fillColorSpace='rgb',
