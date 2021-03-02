@@ -1,0 +1,443 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2020.2.5">
+  <Settings>
+    <Param name="Audio latency priority" updates="None" val="use prefs" valType="str"/>
+    <Param name="Audio lib" updates="None" val="use prefs" valType="str"/>
+    <Param name="Completed URL" updates="None" val="" valType="str"/>
+    <Param name="Data file delimiter" updates="None" val="auto" valType="str"/>
+    <Param name="Data filename" updates="None" val="u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])" valType="code"/>
+    <Param name="Enable Escape" updates="None" val="True" valType="bool"/>
+    <Param name="Experiment info" updates="None" val="{'participant': '', 'trials_per_condition': '90', 'pursuit_or_saccade': '0 = none, 1 = pursuit, 2 = saccade', 'practice_version': '0', 'break_every_n_trials': '30', 'pupil_on': '0'}" valType="code"/>
+    <Param name="Force stereo" updates="None" val="True" valType="bool"/>
+    <Param name="Full-screen window" updates="None" val="True" valType="bool"/>
+    <Param name="HTML path" updates="None" val="" valType="str"/>
+    <Param name="Incomplete URL" updates="None" val="" valType="str"/>
+    <Param name="Monitor" updates="None" val="asus" valType="str"/>
+    <Param name="Resources" updates="None" val="[]" valType="fileList"/>
+    <Param name="Save csv file" updates="None" val="False" valType="bool"/>
+    <Param name="Save excel file" updates="None" val="False" valType="bool"/>
+    <Param name="Save log file" updates="None" val="True" valType="bool"/>
+    <Param name="Save psydat file" updates="None" val="True" valType="bool"/>
+    <Param name="Save wide csv file" updates="None" val="True" valType="bool"/>
+    <Param name="Screen" updates="None" val="3" valType="num"/>
+    <Param name="Show info dlg" updates="None" val="True" valType="bool"/>
+    <Param name="Show mouse" updates="None" val="False" valType="bool"/>
+    <Param name="Units" updates="None" val="deg" valType="str"/>
+    <Param name="Use version" updates="None" val="" valType="str"/>
+    <Param name="Window size (pixels)" updates="None" val="[1920, 1080]" valType="code"/>
+    <Param name="blendMode" updates="None" val="avg" valType="str"/>
+    <Param name="color" updates="None" val="$[-1,-1,-1]" valType="str"/>
+    <Param name="colorSpace" updates="None" val="rgb" valType="str"/>
+    <Param name="expName" updates="None" val="testDotsStepRampPilot" valType="str"/>
+    <Param name="exportHTML" updates="None" val="on Sync" valType="str"/>
+    <Param name="logging level" updates="None" val="debug" valType="code"/>
+  </Settings>
+  <Routines>
+    <Routine name="trial">
+      <TextComponent name="break_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="1" valType="code"/>
+        <Param name="name" updates="None" val="break_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$trials.thisN % trialsPerBreak == 0 and trials.thisN != 0 and practice == 0" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$('space' in getKeys(keyList=[&quot;space&quot;]))" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Please take a break. &amp;#10;Rest your eyes. &amp;#10;Get up and stretch.&amp;#10;Press the spacebar when you’re done." valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <TextComponent name="postbreak_text">
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="languageStyle" updates="None" val="LTR" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="1" valType="code"/>
+        <Param name="name" updates="None" val="postbreak_text" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$break_text.status == FINISHED" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="text" updates="constant" val="Get Ready!" valType="extendedStr"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+      </TextComponent>
+      <CodeComponent name="pretrial_sleep">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="pretrial_sleep_finished = 0;&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="pretrial_sleep_finished = 0" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if pretrial_sleep_finished == 0 \&amp;#10;    and break_text.status != STARTED \&amp;#10;    and postbreak_text.status != STARTED:&amp;#10;    clock.wait(1) # in sec&amp;#10;    pretrial_sleep_finished = 1;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((((pretrial_sleep_finished === 0) &amp;&amp; (break_text.status !== PsychoJS.Status.STARTED)) &amp;&amp; (postbreak_text.status !== PsychoJS.Status.STARTED))) {&amp;#10;    clock.wait(1);&amp;#10;    pretrial_sleep_finished = 1;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pretrial_sleep" valType="code"/>
+      </CodeComponent>
+      <PolygonComponent name="fixation1">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[0,0,0]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="fixation1" valType="code"/>
+        <Param name="opacity" updates="constant" val="0" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="cross" valType="str"/>
+        <Param name="size" updates="constant" val="(.8, .8)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$pretrial_sleep_finished == 1" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </PolygonComponent>
+      <DotsComponent name="dots_stimulus">
+        <Param name="coherence" updates="constant" val="0.8" valType="code"/>
+        <Param name="color" updates="constant" val="$[1.0,1.0,1.0]" valType="str"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="dir" updates="constant" val="0.0" valType="code"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
+        <Param name="dotLife" updates="None" val="50" valType="code"/>
+        <Param name="dotSize" updates="constant" val="$deg2pix(.17, win.monitor)" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fieldPos" updates="constant" val="(0.0, 0.0)" valType="code"/>
+        <Param name="fieldShape" updates="constant" val="circle" valType="str"/>
+        <Param name="fieldSize" updates="constant" val="[20,20]" valType="code"/>
+        <Param name="nDots" updates="constant" val="200" valType="code"/>
+        <Param name="name" updates="None" val="dots_stimulus" valType="code"/>
+        <Param name="noiseDots" updates="None" val="direction" valType="str"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="refreshDots" updates="None" val="repeat" valType="str"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="signalDots" updates="None" val="same" valType="str"/>
+        <Param name="speed" updates="constant" val="0.1" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$fixation1.status==FINISHED" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val=".300" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </DotsComponent>
+      <PolygonComponent name="blackout">
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="Black" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[-1,-1,-1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="0" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="blackout" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(4, 4)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$dots_stimulus.status == STARTED" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$dots_stimulus.status == FINISHED" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="red_dot">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="Red" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[1,1,1]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="0" valType="code"/>
+        <Param name="nVertices" updates="constant" val="100" valType="int"/>
+        <Param name="name" updates="None" val="red_dot" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.6, 0.6)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$fixation1.status == STARTED" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$fixation2.status == FINISHED" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </PolygonComponent>
+      <PolygonComponent name="fixation2">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="$[0,0,0]" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[0,0,0]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="1" valType="code"/>
+        <Param name="nVertices" updates="constant" val="4" valType="int"/>
+        <Param name="name" updates="None" val="fixation2" valType="code"/>
+        <Param name="opacity" updates="constant" val="0" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="cross" valType="str"/>
+        <Param name="size" updates="constant" val="(0.1,0.1)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$fixation1.status == FINISHED" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="0.5" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+      </PolygonComponent>
+      <CodeComponent name="sacadde_pursuit_positions">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if fixation2.status == FINISHED and pursuit_or_saccade_dot.status!=FINISHED:&amp;#10;    pursuitSpeed = 10;&amp;#10;    stepRampTimeBackToCenter = (1.8/10);&amp;#10;    stepRampDist = pursuitSpeed * stepRampTimeBackToCenter;&amp;#10;    stopTime = 1;&amp;#10;    stopPosition = pursuitSpeed*stopTime;&amp;#10;    tStart = fixation2.tStop&amp;#10;    if pursuit_trial == 1:&amp;#10;        if pursuit_saccade_isLeft == 1:&amp;#10;            position = [-(pursuitSpeed*(t-tStart)) + stepRampDist, 0]&amp;#10;        else:&amp;#10;            position = [pursuitSpeed*(t-tStart) - stepRampDist, 0]&amp;#10;    elif saccade_trial == 1:&amp;#10;        if pursuit_saccade_isLeft == 0:&amp;#10;            position = [-20,0] # deg&amp;#10;        else:&amp;#10;            position = [20,0] # deg&amp;#10;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if (((fixation2.status === PsychoJS.Status.FINISHED) &amp;&amp; (pursuit_or_saccade_dot.status !== PsychoJS.Status.FINISHED))) {&amp;#10;    pursuitSpeed = 10;&amp;#10;    stepRampTimeBackToCenter = (1.8 / 10);&amp;#10;    stepRampDist = (pursuitSpeed * stepRampTimeBackToCenter);&amp;#10;    stopTime = 1;&amp;#10;    stopPosition = (pursuitSpeed * stopTime);&amp;#10;    tStart = fixation2.tStop;&amp;#10;    if ((pursuit_trial === 1)) {&amp;#10;        if ((pursuit_saccade_isLeft === 1)) {&amp;#10;            position = [((- (pursuitSpeed * (t - tStart))) + stepRampDist), 0];&amp;#10;        } else {&amp;#10;            position = [((pursuitSpeed * (t - tStart)) - stepRampDist), 0];&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((saccade_trial === 1)) {&amp;#10;            if ((pursuit_saccade_isLeft === 0)) {&amp;#10;                position = [(- 20), 0];&amp;#10;            } else {&amp;#10;                position = [20, 0];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="sacadde_pursuit_positions" valType="code"/>
+      </CodeComponent>
+      <PolygonComponent name="pursuit_or_saccade_dot">
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="fillColor" updates="constant" val="Red" valType="str"/>
+        <Param name="fillColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="interpolate" updates="constant" val="linear" valType="str"/>
+        <Param name="lineColor" updates="constant" val="$[0,0,0]" valType="str"/>
+        <Param name="lineColorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="lineWidth" updates="constant" val="0" valType="code"/>
+        <Param name="nVertices" updates="constant" val="1000" valType="int"/>
+        <Param name="name" updates="None" val="pursuit_or_saccade_dot" valType="code"/>
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="pos" updates="set every frame" val="$position" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="shape" updates="constant" val="regular polygon..." valType="str"/>
+        <Param name="size" updates="constant" val="(0.6, 0.6)" valType="code"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$fixation2.status == FINISHED and (pursuit_trial==1 or saccade_trial==1)" valType="code"/>
+        <Param name="stopType" updates="None" val="condition" valType="str"/>
+        <Param name="stopVal" updates="constant" val="$position[0] &gt; stopPosition or position[0] &lt; -1*stopPosition" valType="code"/>
+        <Param name="syncScreenRefresh" updates="None" val="True" valType="bool"/>
+        <Param name="units" updates="None" val="deg" valType="str"/>
+      </PolygonComponent>
+      <KeyboardComponent name="response">
+        <Param name="allowedKeys" updates="constant" val="'left','right'" valType="code"/>
+        <Param name="correctAns" updates="constant" val="" valType="str"/>
+        <Param name="disabled" updates="None" val="True" valType="bool"/>
+        <Param name="discard previous" updates="constant" val="True" valType="bool"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="forceEndRoutine" updates="constant" val="True" valType="bool"/>
+        <Param name="name" updates="None" val="response" valType="code"/>
+        <Param name="saveStartStop" updates="None" val="True" valType="bool"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="startType" updates="None" val="condition" valType="str"/>
+        <Param name="startVal" updates="None" val="$(pursuit_trial == 1 or saccade_trial == 1) and (pursuit_or_saccade_dot.status==FINISHED and response_trial == 1)" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="stopVal" updates="constant" val="100" valType="code"/>
+        <Param name="store" updates="constant" val="last key" valType="str"/>
+        <Param name="storeCorrect" updates="constant" val="False" valType="bool"/>
+        <Param name="syncScreenRefresh" updates="constant" val="True" valType="bool"/>
+      </KeyboardComponent>
+      <CodeComponent name="setup">
+        <Param name="Before Experiment" updates="constant" val="from psychopy.tools.monitorunittools import deg2pix&amp;#10;from psychopy.event import getKeys" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="import {deg2pix} from 'psychopy/tools/monitorunittools';&amp;#10;import {getKeys} from 'psychopy/event';&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="#print(&quot;dotsize set to:  &quot;, dots_stimulus.dotSize)&amp;#10;&amp;#10;## Type checking inputs&amp;#10;typecheck_flag = 0&amp;#10;if expInfo['trials_per_condition'].isdigit():&amp;#10;    print(&quot;trials_per_condition is a digit: &quot;, expInfo['trials_per_condition'])&amp;#10;else:&amp;#10;    print(&quot;Please input a digit for 'trials_per_condition.' \&amp;#10;    You entered: &quot;, expInfo['trials_per_condition'])&amp;#10;    typecheck_flag = 1;&amp;#10;    &amp;#10;if expInfo['pupil_on'] in [&quot;0&quot;,&quot;1&quot;]:&amp;#10;    print(&quot;pupil_on: &quot;, expInfo['pupil_on'])&amp;#10;else:&amp;#10;    print(&quot;Please input 1 or 0 for 'pupil_on'.  \&amp;#10;    You entered: &quot;, expInfo['pupil_on'])&amp;#10;    typecheck_flag = 1;&amp;#10;&amp;#10;if expInfo['practice_version'] in [&quot;0&quot;,&quot;1&quot;]:&amp;#10;    print(&quot;practice_version: &quot;, expInfo['practice_version'])&amp;#10;else:&amp;#10;    print(&quot;Please input 1 or 0 for 'practice_version'.  \&amp;#10;    You entered: &quot;, expInfo['practice_version'])&amp;#10;    typecheck_flag = 1;&amp;#10;&amp;#10;if expInfo['break_every_n_trials'].isdigit():&amp;#10;    print(&quot;break_every_n_trials is a digit: &quot;, expInfo['break_every_n_trials'])&amp;#10;else:&amp;#10;    print(&quot;Please input a digit for 'break_every_n_trials.' \&amp;#10;    You entered: &quot;, expInfo['break_every_n_trials'])&amp;#10;    typecheck_flag = 1;&amp;#10;&amp;#10;if expInfo['pursuit_or_saccade'] in [&quot;0&quot;,&quot;1&quot;,&quot;2&quot;]:&amp;#10;    print(&quot;pursuit_or_saccade: &quot;, expInfo['pursuit_or_saccade'])&amp;#10;else:&amp;#10;    print(&quot;Please input 1 or 0 for 'practice_version'.  \&amp;#10;    You entered: &quot;, expInfo['practice_version'])&amp;#10;    typecheck_flag = 1;&amp;#10;&amp;#10;if typecheck_flag == 1:&amp;#10;    print(&quot;SEE ABOVE ERROR. Quitting now.&quot;)&amp;#10;    core.quit()" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;typecheck_flag = 0;&amp;#10;if (expInfo[&quot;trials_per_condition&quot;].isdigit()) {&amp;#10;    console.log(&quot;trials_per_condition is a digit: &quot;, expInfo[&quot;trials_per_condition&quot;]);&amp;#10;} else {&amp;#10;    console.log(&quot;Please input a digit for 'trials_per_condition.'     You entered: &quot;, expInfo[&quot;trials_per_condition&quot;]);&amp;#10;    typecheck_flag = 1;&amp;#10;}&amp;#10;if (_pj.in_es6(expInfo[&quot;pupil_on&quot;], [&quot;0&quot;, &quot;1&quot;])) {&amp;#10;    console.log(&quot;pupil_on: &quot;, expInfo[&quot;pupil_on&quot;]);&amp;#10;} else {&amp;#10;    console.log(&quot;Please input 1 or 0 for 'pupil_on'.      You entered: &quot;, expInfo[&quot;pupil_on&quot;]);&amp;#10;    typecheck_flag = 1;&amp;#10;}&amp;#10;if (_pj.in_es6(expInfo[&quot;practice_version&quot;], [&quot;0&quot;, &quot;1&quot;])) {&amp;#10;    console.log(&quot;practice_version: &quot;, expInfo[&quot;practice_version&quot;]);&amp;#10;} else {&amp;#10;    console.log(&quot;Please input 1 or 0 for 'practice_version'.      You entered: &quot;, expInfo[&quot;practice_version&quot;]);&amp;#10;    typecheck_flag = 1;&amp;#10;}&amp;#10;if (expInfo[&quot;break_every_n_trials&quot;].isdigit()) {&amp;#10;    console.log(&quot;break_every_n_trials is a digit: &quot;, expInfo[&quot;break_every_n_trials&quot;]);&amp;#10;} else {&amp;#10;    console.log(&quot;Please input a digit for 'break_every_n_trials.'     You entered: &quot;, expInfo[&quot;break_every_n_trials&quot;]);&amp;#10;    typecheck_flag = 1;&amp;#10;}&amp;#10;if (_pj.in_es6(expInfo[&quot;pursuit_or_saccade&quot;], [&quot;0&quot;, &quot;1&quot;, &quot;2&quot;])) {&amp;#10;    console.log(&quot;pursuit_or_saccade: &quot;, expInfo[&quot;pursuit_or_saccade&quot;]);&amp;#10;} else {&amp;#10;    console.log(&quot;Please input 1 or 0 for 'practice_version'.      You entered: &quot;, expInfo[&quot;practice_version&quot;]);&amp;#10;    typecheck_flag = 1;&amp;#10;}&amp;#10;if ((typecheck_flag === 1)) {&amp;#10;    console.log(&quot;SEE ABOVE ERROR. Quitting now.&quot;);&amp;#10;    core.quit();&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="# practice_text.text = &quot;Coherence: &quot; + str(dots_stimulus.coherence)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="setup" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="set_coh_and_dir">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="pursuit_saccade_isLeft = np.floor((np.random.rand() * 2));&amp;#10;position = 0;&amp;#10;console.log(&quot;this trial: &quot;, trials.thisN);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="#if practice == 0:&amp;#10;#    dots_stimulus.coherence = coh_range_big.pop()&amp;#10;#dots_stimulus.dir = (np.floor(np.random.rand() * 2) * 180)&amp;#10;&amp;#10;pursuit_saccade_isLeft = np.floor(np.random.rand() * 2)&amp;#10;position = 0&amp;#10;print(&quot;this trial: &quot; , trials.thisN)" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="set_coh_and_dir" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="output">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trials.addData(&quot;pursuit_saccade_isLeft&quot;, pursuit_saccade_isLeft);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="#trials.addData('coh', dots_stimulus.coherence)&amp;#10;#trials.addData('dir', dots_stimulus.dir)&amp;#10;#print(&quot;response keys: &quot;, response.keys)&amp;#10;#if len(response.keys) != 1:&amp;#10;#    responseNum = -1&amp;#10;#if response.keys[0] in ['r', 'right']:&amp;#10;#  responseNum = 0&amp;#10;#elif response.keys[0] in ['l', 'left']:&amp;#10;#  responseNum = 180&amp;#10;#else:&amp;#10;#  responseNum = -2&amp;#10;#correct = -1&amp;#10;#if responseNum == dots_stimulus.dir:&amp;#10;#    correct = 1&amp;#10;#else:&amp;#10;#    correct = 0&amp;#10;&amp;#10;#congruent = -1&amp;#10;#if (dots_stimulus.dir == 180 and pursuit_saccade_isLeft == 1)  \&amp;#10;#        or (dots_stimulus.dir == 0 and pursuit_saccade_isLeft == 0):&amp;#10;#    congruent = 1&amp;#10;#else:&amp;#10;#    congruent = 0&amp;#10;#trials.addData('response', responseNum)&amp;#10;#trials.addData('correct', correct)&amp;#10;trials.addData('pursuit_saccade_isLeft',pursuit_saccade_isLeft)&amp;#10;#trials.addData('congruent', congruent)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="output" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="parameters">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import numpy&amp;#10;&amp;#10;# adjust these&amp;#10;coh_range = [0.03, .06, .12, .24, .48]&amp;#10;trials_per_condition = int(expInfo['trials_per_condition'])&amp;#10;pupil_on = int(expInfo['pupil_on'])&amp;#10;response_trial = 1 # fix this&amp;#10;practice = int(expInfo['practice_version'])&amp;#10;trialsPerBreak = int(expInfo['break_every_n_trials'])&amp;#10;&amp;#10;pursuit_trial = 0&amp;#10;saccade_trial = 0&amp;#10;if int(expInfo['pursuit_or_saccade']) == 1:&amp;#10;    pursuit_trial = 1&amp;#10;elif int(expInfo['pursuit_or_saccade']) == 2:&amp;#10;    saccade_trial = 1&amp;#10;    &amp;#10;print(&quot;coherence range: &quot;, coh_range,&amp;#10;      &quot;\ntrials per condition: &quot;, trials_per_condition,&amp;#10;      &quot;\npupil_on: &quot;, pupil_on,&amp;#10;      &quot;\npractice version: &quot;, practice,&amp;#10;      &quot;\ntrials per break: &quot;, trialsPerBreak,&amp;#10;      &quot;\npursuit_trial: &quot;, pursuit_trial,&amp;#10;      &quot;\nsaccade_trial: &quot;, saccade_trial)&amp;#10;      &amp;#10;# randomize coherences in blocks&amp;#10;coh_range_big = []&amp;#10;for x in range(0, trials_per_condition):&amp;#10;    x = coh_range.copy()&amp;#10;    numpy.random.shuffle(x)&amp;#10;    coh_range_big = coh_range_big + x" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="import * as numpy from 'numpy';&amp;#10;var coh_range, coh_range_big, practice, pupil_on, pursuit_trial, response_trial, saccade_trial, trialsPerBreak, trials_per_condition, x;&amp;#10;coh_range = [0.03, 0.06, 0.12, 0.24, 0.48];&amp;#10;trials_per_condition = Number.parseInt(expInfo[&quot;trials_per_condition&quot;]);&amp;#10;pupil_on = Number.parseInt(expInfo[&quot;pupil_on&quot;]);&amp;#10;response_trial = 1;&amp;#10;practice = Number.parseInt(expInfo[&quot;practice_version&quot;]);&amp;#10;trialsPerBreak = Number.parseInt(expInfo[&quot;break_every_n_trials&quot;]);&amp;#10;pursuit_trial = 0;&amp;#10;saccade_trial = 0;&amp;#10;if ((Number.parseInt(expInfo[&quot;pursuit_or_saccade&quot;]) === 1)) {&amp;#10;    pursuit_trial = 1;&amp;#10;} else {&amp;#10;    if ((Number.parseInt(expInfo[&quot;pursuit_or_saccade&quot;]) === 2)) {&amp;#10;        saccade_trial = 1;&amp;#10;    }&amp;#10;}&amp;#10;console.log(&quot;coherence range: &quot;, coh_range, &quot;\ntrials per condition: &quot;, trials_per_condition, &quot;\npupil_on: &quot;, pupil_on, &quot;\npractice version: &quot;, practice, &quot;\ntrials per break: &quot;, trialsPerBreak, &quot;\npursuit_trial: &quot;, pursuit_trial, &quot;\nsaccade_trial: &quot;, saccade_trial);&amp;#10;coh_range_big = [];&amp;#10;for (var x = 0, _pj_a = trials_per_condition; (x &lt; _pj_a); x += 1) {&amp;#10;    x = coh_range.copy();&amp;#10;    numpy.random.shuffle(x);&amp;#10;    coh_range_big = (coh_range_big + x);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="parameters" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="pupil_network">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="import zmq&amp;#10;from msgpack import loads&amp;#10;&amp;#10;if pupil_on == 1:&amp;#10;    context = zmq.Context()&amp;#10;    # open a req port to talk to pupil&amp;#10;    addr = '127.0.0.1'  # remote ip or localhost&amp;#10;    req_port = &quot;50020&quot;  # same as in the pupil remote gui&amp;#10;    req = context.socket(zmq.REQ)&amp;#10;    req.connect(&quot;tcp://{}:{}&quot;.format(addr, req_port))&amp;#10;    # ask for the sub port&amp;#10;    req.send_string('SUB_PORT')&amp;#10;    sub_port = req.recv_string()&amp;#10;&amp;#10;    # open a sub port to listen to pupil&amp;#10;    sub = context.socket(zmq.SUB)&amp;#10;    sub.connect(&quot;tcp://{}:{}&quot;.format(addr, sub_port))&amp;#10;&amp;#10;    # set subscriptions to topics&amp;#10;    # recv just pupil/gaze/notifications&amp;#10;    sub.setsockopt_string(zmq.SUBSCRIBE, 'pupil.')&amp;#10;    # sub.setsockopt_string(zmq.SUBSCRIBE, 'gaze')&amp;#10;    # sub.setsockopt_string(zmq.SUBSCRIBE, 'notify.')&amp;#10;    # sub.setsockopt_string(zmq.SUBSCRIBE, 'logging.')&amp;#10;    # or everything:&amp;#10;    # sub.setsockopt_string(zmq.SUBSCRIBE, '')" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="psychopy_timestamp = win.getFutureFlipTime({&quot;clock&quot;: null});&amp;#10;if (pupil_on) {&amp;#10;    req.send_string(&quot;t&quot;);&amp;#10;    pupil_timestamp = req.recv_string();&amp;#10;    console.log(&quot;pupil timestamp&quot;, pupil_timestamp);&amp;#10;    console.log(&quot;psychopy timestamp&quot;, psychopy_timestamp);&amp;#10;} else {&amp;#10;    pupil_timestamp = (- 1);&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="psychopy_timestamp = win.getFutureFlipTime(clock=None)&amp;#10;#topic, payload = sub.recv_multipart()&amp;#10;#timestamp = loads(payload)[b'timestamp']&amp;#10;&amp;#10;if pupil_on:&amp;#10;    req.send_string('t')&amp;#10;    pupil_timestamp = req.recv_string()&amp;#10;    print(&quot;pupil timestamp&quot;, pupil_timestamp)&amp;#10;    print(&quot;psychopy timestamp&quot;, psychopy_timestamp)&amp;#10;else:&amp;#10;    pupil_timestamp = -1;&amp;#10;" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="trials.addData(&quot;pupil_timestamp&quot;, pupil_timestamp);&amp;#10;trials.addData(&quot;psychopy_timestamp&quot;, psychopy_timestamp);&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="trials.addData('pupil_timestamp', pupil_timestamp)&amp;#10;trials.addData('psychopy_timestamp', psychopy_timestamp)" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="pupil_network" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="to_do">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="# test congruency output&amp;#10;# response trial flag&amp;#10;# saccade version" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="/* Syntax Error: Fix Python code */" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="to_do" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="practice">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="stair_range = [.03, .06, .12, .24, .48, .80, .85, .90, .95, 1]&amp;#10;stair_ind = len(stair_range) - 1" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="stair_range = [0.03, 0.06, 0.12, 0.24, 0.48, 0.8, 0.85, 0.9, 0.95, 1];&amp;#10;stair_ind = (stair_range.length - 1);&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="if ((practice === 1)) {&amp;#10;    dots_stimulus.coherence = stair_range[stair_ind];&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="if practice == 1:&amp;#10;    dots_stimulus.coherence = stair_range[stair_ind]" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="if ((practice === 1)) {&amp;#10;    if (((correct === 0) &amp;&amp; (stair_range[stair_ind] &gt; 0.5))) {&amp;#10;        if ((stair_ind &lt; (stair_range.length - 1))) {&amp;#10;            stair_ind += 1;&amp;#10;            console.log(&quot;going back up a level to: &quot;, stair_range[stair_ind]);&amp;#10;        } else {&amp;#10;            console.log(&quot;at max level. staying at: &quot;, stair_range[stair_ind]);&amp;#10;        }&amp;#10;    } else {&amp;#10;        if ((stair_ind === 0)) {&amp;#10;            trials.finished = 1;&amp;#10;        } else {&amp;#10;            stair_ind -= 1;&amp;#10;            console.log(&quot;going down to: &quot;, stair_range[stair_ind]);&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="if practice == 1:&amp;#10;    if correct == 0 and stair_range[stair_ind] &gt; .50:&amp;#10;        if stair_ind &lt; len(stair_range) - 1:&amp;#10;            stair_ind += 1&amp;#10;            print(&quot;going back up a level to: &quot;, stair_range[stair_ind])&amp;#10;        else:&amp;#10;            print(&quot;at max level. staying at: &quot;, stair_range[stair_ind])&amp;#10;            pass&amp;#10;    else: &amp;#10;        if stair_ind == 0:&amp;#10;            trials.finished = 1&amp;#10;        else:&amp;#10;            stair_ind -= 1&amp;#10;            print(&quot;going down to: &quot;, stair_range[stair_ind])&amp;#10;" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="practice" valType="code"/>
+      </CodeComponent>
+      <CodeComponent name="endRoutine">
+        <Param name="Before Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Before JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Begin Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="Code Type" updates="None" val="Auto-&gt;JS" valType="str"/>
+        <Param name="Each Frame" updates="constant" val="if pursuit_or_saccade_dot.status==FINISHED:&amp;#10;    win.flip()&amp;#10;    continueRoutine = False;" valType="extendedCode"/>
+        <Param name="Each JS Frame" updates="constant" val="if ((pursuit_or_saccade_dot.status === PsychoJS.Status.FINISHED)) {&amp;#10;    win.flip();&amp;#10;    continueRoutine = false;&amp;#10;}&amp;#10;" valType="extendedCode"/>
+        <Param name="End Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Experiment" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End JS Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="End Routine" updates="constant" val="" valType="extendedCode"/>
+        <Param name="disabled" updates="None" val="False" valType="bool"/>
+        <Param name="name" updates="None" val="endRoutine" valType="code"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="None" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="" valType="str"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="100" valType="code"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="trial"/>
+    <LoopTerminator name="trials"/>
+  </Flow>
+</PsychoPy2experiment>
